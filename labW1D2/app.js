@@ -7,10 +7,10 @@ function nameString(obj) {
     if (obj.length == 0) {
         return "object has no properties";
     }
-    if (obj === null) {
+    if (obj === undefined) {
         return "no object passed";
     }
-    if (arguments.length === 0) {
+    if () {
         return "null argument";
     }
     if (arguments.length == 1) {
