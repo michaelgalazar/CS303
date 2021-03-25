@@ -10,7 +10,7 @@ function nameString(obj) {
     if (obj == null) {
         return "no object passed";
     }
-    if (arguments.length == 0) {
+    if (obj.length == 0) {
         return "null argument";
     }
     if (arguments.length == 1) {
