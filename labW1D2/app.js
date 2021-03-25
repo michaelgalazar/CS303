@@ -6,7 +6,7 @@
 function nameString(obj) {
     
     for ( let property of obj) {
-        if (property == undefined) {
+        if (property == null) {
             return "object has no properties";
         }
     }
