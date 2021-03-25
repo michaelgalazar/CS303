@@ -4,13 +4,11 @@
 
 // See tests.js for behavior
 function nameString(obj) {
-    
-    for ( let property of obj) {
-        if (property == null) {
-            return "object has no properties";
-        }
+
+    if (obj[0] == null) {
+        return "object has no properties";
     }
-    
+
     if (obj === undefined) {
         return "no object passed";
     }
@@ -24,9 +22,9 @@ function nameString(obj) {
     }
     else {
         let array = [];
-        for ( let key in obj ) {
+        for (let key in obj) {
             array.push(key);
         }
-        return array[0] + "." + array[array.length-1] + "." + array[1];
+        return array[0] + "." + array[array.length - 1] + "." + array[1];
     }
 }
