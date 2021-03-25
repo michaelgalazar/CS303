@@ -5,7 +5,7 @@
 // See tests.js for behavior
 function nameString(obj) {
     
-    for ( let property in obj) {
+    for ( let property of obj) {
         if (property == undefined) {
             return "object has no properties";
         }
