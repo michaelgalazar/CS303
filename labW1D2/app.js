@@ -5,7 +5,7 @@
 // See tests.js for behavior
 function nameString(obj) {
 
-    if (obj[0] == null) {
+    if (obj.length == 0) {
         return "object has no properties";
     }
 
