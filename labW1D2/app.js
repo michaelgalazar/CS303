@@ -4,9 +4,13 @@
 
 // See tests.js for behavior
 function nameString(obj) {
-    if (obj.size() == 0) {
-        return "object has no properties";
+    
+    for ( let property in obj) {
+        if (property == undefined) {
+            return "object has no properties";
+        }
     }
+    
     if (obj === undefined) {
         return "no object passed";
     }
