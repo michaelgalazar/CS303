@@ -5,17 +5,17 @@
 // See tests.js for behavior
 function nameString(obj) {
 
-    if (obj.length == 0) {
+    if ( Object.keys(obj).length == 0 ) {
         return "object has no properties";
     }
 
-    if (obj === undefined) {
+    if ( obj === null ) {
         return "no object passed";
     }
-    if () {
+    if ( obj === null ) {
         return "null argument";
     }
-    if (arguments.length == 1) {
+    if ( arguments.length == 1 ) {
         for (let key in obj) {
             return key;
         }
