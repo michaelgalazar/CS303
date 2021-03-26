@@ -9,7 +9,7 @@ function nameString(obj) {
         return "object has no properties";
     }
 
-    if ( obj == null ) {
+    if ( obj === null ) {
         return "no object passed";
     }
     if ( obj === null ) {
