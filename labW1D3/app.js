@@ -16,10 +16,8 @@ Creates an object that contains the following information from the "this" object
 }	
 */
 function analyzer() {
-	let numOfPro = 0;
-	for ( let property in this ) {
-		numOfPro++;
-	}
+	
+	let numOfPro = Object.keys(this).length;
 
 	let countShortN = 0;
 	for ( let key in this ) {
@@ -36,7 +34,7 @@ function analyzer() {
 		}
 	}
 
-	return {numProperties: numOfPro, cntShortName: countShortN, cntReferences: countRef};
+	return {numProperties: numOfPro, cntShortName: countShortN, cntReference: countRef};
 }
 
 /* Constructor for a person object
