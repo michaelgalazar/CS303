@@ -7,6 +7,10 @@ exports.nameString = nameString;
 // See tests.js for behavior
 function nameString(obj) {
 
+    if ( Object.keys(obj).length === 0 ) {
+        return "object has no properties";
+    }
+
     if ( obj === undefined ) {
         return "no object passed";
     }
@@ -18,9 +22,6 @@ function nameString(obj) {
             return key;
         }
     }
-    if ( Object.keys(obj).length === 0 ) {
-        return "object has no properties";
-    }
     else {
         let array = [];
         let output;
@@ -28,8 +29,7 @@ function nameString(obj) {
             array.push(key);
         }
 
-        output = array.sort().join(".");
-        return output;    //array[0] + "." + array[array.length - 1] + "." + array[1];
+        return array.sort().join(".");    //array[0] + "." + array[array.length - 1] + "." + array[1];
     }
 }
 
