@@ -17,11 +17,11 @@ function nameString(obj) {
     if ( obj === null ) {
         return "null argument";
     }
-    // else if ( arguments.length == 1 ) {
-    //     for (let key in obj) {
-    //         return key;
-    //     }
-    // }
+    else if ( arguments.length == 1 ) {
+        for (let key in obj) {
+            return key;
+        }
+    }
     else {
         let array = [];
         let output;
