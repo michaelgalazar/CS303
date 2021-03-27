@@ -30,7 +30,7 @@ function nameString(obj) {
         }
 
         output = array.sort().join(".");
-        return output;//array[0] + "." + array[array.length - 1] + "." + array[1];
+        return output;    //array[0] + "." + array[array.length - 1] + "." + array[1];
     }
 }
 
