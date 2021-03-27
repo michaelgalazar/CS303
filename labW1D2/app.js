@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 "use strict";
 
-See tests.js for behavior
+// See tests.js for behavior
 function nameString(obj) {
 
     if ( Object.keys(obj).length === 0 ) {
@@ -25,7 +25,7 @@ function nameString(obj) {
         for (let key in obj) {
             array.push(key);
         }
-        return array[0] + "." + array[array.length - 1] + "." + array[1];
+        return array.sort().join(".");//array[0] + "." + array[array.length - 1] + "." + array[1];
     }
 }
 
