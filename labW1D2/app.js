@@ -14,10 +14,10 @@ function nameString(obj) {
     if ( obj === undefined ) {
         return "no object passed";
     }
-    if ( obj === null ) {
+    else if ( obj === null ) {
         return "null argument";
     }
-    if ( arguments.length == 1 ) {
+    else if ( arguments.length == 1 ) {
         for (let key in obj) {
             return key;
         }
@@ -30,7 +30,7 @@ function nameString(obj) {
         }
 
         output = array.sort().join(".");
-        return output;    //array[0] + "." + array[array.length - 1] + "." + array[1];
+        return output;  //array[0] + "." + array[array.length - 1] + "." + array[1];
     }
 }
 
