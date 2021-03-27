@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 "use strict";
 
-exports.Person = Person;
-exports.analyzer = analyzer;
+// exports.Person = Person;
+// exports.analyzer = analyzer;
 
 /*
 Function analyzer
