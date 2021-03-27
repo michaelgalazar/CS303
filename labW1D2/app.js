@@ -11,7 +11,7 @@ function nameString(obj) {
         return "object has no properties";
     }
 
-    if ( obj === undefined ) {
+    else if ( obj === undefined ) {
         return "no object passed";
     }
     else if ( obj === null ) {
