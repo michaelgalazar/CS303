@@ -24,11 +24,13 @@ function nameString(obj) {
     }
     else {
         let array = [];
+        let newArray;
         for (let key in obj) {
             array.push(key);
         }
 
-        return array.sort().join(".");    //array[0] + "." + array[array.length - 1] + "." + array[1];
+        newArray = array.sort();
+        return newArray.join(".");  //array[0] + "." + array[array.length - 1] + "." + array[1];
     }
 
 }
