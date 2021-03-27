@@ -24,7 +24,7 @@ function nameString(obj) {
     }
     else {
         let array = [];
-        let newArray;
+        let newArray = [];
         for (let key in obj) {
             array.push(key);
         }
