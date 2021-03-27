@@ -7,20 +7,19 @@ exports.nameString = nameString;
 // See tests.js for behavior
 function nameString(obj) {
 
-    if ( Object.keys(obj).length === 0 ) {
-        return "object has no properties";
-    }
-
     if ( obj === undefined ) {
         return "no object passed";
     }
-    else if ( obj === null ) {
+    if ( obj === null ) {
         return "null argument";
     }
-    else if ( arguments.length == 1 ) {
+    if ( arguments.length == 1 ) {
         for (let key in obj) {
             return key;
         }
+    }
+    if ( Object.keys(obj).length === 0 ) {
+        return "object has no properties";
     }
     else {
         let array = [];
