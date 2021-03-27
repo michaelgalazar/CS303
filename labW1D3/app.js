@@ -2,6 +2,9 @@
 /* eslint-disable no-unused-vars */
 "use strict";
 
+exports.Person = Person;
+exports.analyzer = analyzer;
+
 /*
 Function analyzer
 Has an unbound this
@@ -13,7 +16,27 @@ Creates an object that contains the following information from the "this" object
 }	
 */
 function analyzer() {
-	return {};
+	let numOfPro = 0;
+	for ( let property in this ) {
+		numOfPro++;
+	}
+
+	let countShortN = 0;
+	for ( let key in this ) {
+		if ( key.length < 3 ) {
+			countShortN++;
+		}
+	}
+
+	let countRef = 0;
+
+	for ( let key in this ) {
+		if ( typeof this[key] === "object" ) {
+			countRef++;
+		}
+	}
+
+	return {numProperties: numOfPro, cntShortName: countShortN, cntReferences: countRef};
 }
 
 /* Constructor for a person object
@@ -26,4 +49,14 @@ function analyzer() {
 	}
 */
 function Person(name, country, grades) {
+	this.name = name;
+	this.country = country;
+	this.grades = grades;
+	this.computeGrade = function () {
+		let sum = 0;
+		for ( let grade of grades) {
+			sum += grade;
+		}
+		return sum / grades.length;
+	};
 }
