@@ -2,6 +2,8 @@
 /* eslint-disable no-unused-vars */
 "use strict";
 
+exports.nameString = nameString;
+
 // See tests.js for behavior
 function nameString(obj) {
 
