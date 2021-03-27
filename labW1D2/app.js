@@ -11,10 +11,10 @@ function nameString(obj) {
         return "object has no properties";
     }
 
-    else if ( obj === undefined ) {
+    if ( obj == undefined ) {
         return "no object passed";
     }
-    else if ( obj === null ) {
+    else if ( obj == null ) {
         return "null argument";
     }
     else if ( arguments.length == 1 ) {
