@@ -7,7 +7,7 @@ function removeEvenCharacters(string) {
 
     let newString = "";
 
-    if ( string === null ) {
+    if ( string === undefined ) {
         return "missing argument";
     }
     else if ( typeof string !== "string" ) {
