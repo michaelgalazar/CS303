@@ -45,7 +45,7 @@ function ArrayDemo(array) {
     
     this.array = array;
     let newObject = new ArrayDemo();
-     let numbers = newObject.keys();
+     let numbers = newObject.keys(); 
      let strings = newObject.keys();
 
     for ( let items of array ) {
