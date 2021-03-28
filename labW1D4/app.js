@@ -59,6 +59,13 @@ function ArrayDemo(array) {
 
 // Makes all negative numbers of the input array positive
 function makePositive(array) {
+    
+    for ( let i = 0; i < array.length; i++ ) {
+        if ( array[i] < 0 ) {
+            array[i] = array[i] * -1;
+        }
+    }
+    return array;
 }
 
 // Replaces sequences of 0s with an "*", e.g.
