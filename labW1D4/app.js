@@ -59,7 +59,7 @@ function ArrayDemo(array) {
 
 // Makes all negative numbers of the input array positive
 function makePositive(array) {
-    
+
     for ( let i = 0; i < array.length; i++ ) {
         if ( array[i] < 0 ) {
             array[i] = array[i] * -1;
@@ -71,6 +71,13 @@ function makePositive(array) {
 // Replaces sequences of 0s with an "*", e.g.
 // removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]) returns [3, "*", 5, "*", 7, "*"];
 function removeZeros(array) {
+
+    for ( let i = 0; i < array.length; i++ ) {
+        if ( array[i] === 0 ) {
+            array[i] = "*";
+        }
+    }
+    return array;
 }
 
 
