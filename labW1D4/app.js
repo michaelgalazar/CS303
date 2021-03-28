@@ -43,7 +43,7 @@ console.log(sumPositiveNumbers([-1,4,5,-2,-3,10]));
 // new ArrayDemo([1, "a", "c", 2, 4]) returns {numbers:[1, 2, 4]; strings:["a", "c"}
 function ArrayDemo(array) {
     
-    this.array = array;
+    this.array = [1, "a", "c", 2, 4];
     let newObject = new ArrayDemo();
      let numbers = newObject.keys(); 
      let strings = newObject.keys();
