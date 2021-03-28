@@ -3,7 +3,15 @@
 "use strict";
 
 function countSubstring(s, target) {
+    let count = 0;
+    for ( let i = 0; i < s.length-1; i++ ) {
+        if (s.substring(i, i+3) === target ) {
+            count++;
+        }
+    }
+    return count;
 }
+//console.log(countSubstring("5abdxyxabdabd", "abd"));
 
 // Save obj in localStorage
 function saveInLocalStorage(name, obj) {
