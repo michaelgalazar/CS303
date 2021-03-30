@@ -41,20 +41,30 @@ console.log(sumPositiveNumbers([-1,4,5,-2,-3,10]));
 // Input an array containing numbers and string, e.g. [1, "a", "c", 2, 4]
 // Creates an object with two array properties numbers and strings, e.g.
 // new ArrayDemo([1, "a", "c", 2, 4]) returns {numbers:[1, 2, 4]; strings:["a", "c"}
-function ArrayDemo(array) {
+function arrayDemo(array) {
     
-    array = [1, "a", "c", 2, 4];
-    let newObject = new ArrayDemo();
-    
-    for ( let items of array ) {
-        if (typeof items === "number" ) {
-            newObject.numbers.push(items);
+    function f (item) {
+        if ( this.numbers === item ) {
+            return array.numbers;
         }
-        if (typeof items === "string" ) {
-            newObject.strings.push(items);
+        if ( this.strings === item ) {
+            return array.strings;
         }
     }
-    return newObject;
+    this.numbers = array.filter(f);
+    this.strings = array.filter(f);
+    // array = [1, "a", "c", 2, 4];
+    // let newObject = new ArrayDemo();
+    
+    // for ( let items of array ) {
+    //     if (typeof items === "number" ) {
+    //         newObject.numbers.push(items);
+    //     }
+    //     if (typeof items === "string" ) {
+    //         newObject.strings.push(items);
+    //     }
+    // }
+    // return newObject;
 }
 
 // Makes all negative numbers of the input array positive
@@ -83,6 +93,6 @@ function removeZeros(array) {
     }
     return array;
 }
-//console.log(removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]));
+console.log(removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]));
 
 
