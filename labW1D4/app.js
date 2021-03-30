@@ -45,10 +45,10 @@ function arrayDemo(array) {
     
     function f (item) {
         if ( this.numbers === item ) {
-            return array.numbers;
+            return item;
         }
         if ( this.strings === item ) {
-            return array.strings;
+            return item;
         }
     }
     this.numbers = array.filter(f);
